@@ -58,15 +58,6 @@ public class StringHelperTest extends StringHelper {
 		assertEquals(expected, actual);
 	}
 	
-//	areFirstAndLastTwoCharactersTheSame
-	
-	/*
-	 * ABCD => false
-	 * ABAB => true
-	 * AB 	=> true
-	 * A	=> false
-	*/
-	
 	/*
 	* Test ABCD => false
 	*/
