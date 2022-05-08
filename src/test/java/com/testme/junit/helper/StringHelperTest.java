@@ -12,7 +12,7 @@ public class StringHelperTest extends StringHelper {
 	 * Passing AABC => BC test
 	 */
 	@Test
-	public void truncateAInFirst2PositionsTest_AABC_Success() {
+	public void testTruncateAInFirst2Positions_AABC_Success() {
 		
 		StringHelper helper = new StringHelper();
 		
@@ -26,7 +26,7 @@ public class StringHelperTest extends StringHelper {
 	 * Passing ABC => BC test
 	 */
 	@Test
-	public void truncateAInFirst2PositionsTest_ABC_Success() {
+	public void testTruncateAInFirst2Positions_ABC_Success() {
 		
 		StringHelper helper = new StringHelper();
 		
