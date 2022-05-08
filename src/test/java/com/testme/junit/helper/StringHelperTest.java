@@ -86,8 +86,19 @@ public class StringHelperTest extends StringHelper {
 	/*
 	* Test AB => true
 	*/
-//	@Test
-//	public void areFirstAndLastTwoCharactersTheSame_True_ABAB
+	@Test
+	public void areFirstAndLastTwoCharactersTheSame_True_AB() {
+		assertTrue(helper.areFirstAndLastTwoCharactersTheSame("AB"));
+	}
+	
+	/*
+	* Test A => false
+	*/
+	@Test
+	public void areFirstAndLastTwoCharactersTheSame_True_A() {
+		assertFalse(helper.areFirstAndLastTwoCharactersTheSame("A"));
+	}
+	
 	
 
 }
