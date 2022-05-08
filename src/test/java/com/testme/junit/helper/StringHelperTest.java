@@ -1,20 +1,20 @@
 package com.testme.junit.helper;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-
-import com.testme.junit.helper.StringHelper;
 
 public class StringHelperTest extends StringHelper {
 
 	StringHelper helper = new StringHelper();
 	
 	/*
-	 * Passing AABC => BC test
+	 * Test AABC => BC
 	 */
 	@Test
-	public void testTruncateAInFirst2Positions_AABC_Success() {
+	public void testTruncateAInFirst2Positions_AABC() {
 		
 		String actual = helper.truncateAInFirst2Positions("AABC");
 		String expected = "BC";
@@ -23,15 +23,71 @@ public class StringHelperTest extends StringHelper {
 	}
 	
 	/*
-	 * Passing ABC => BC test
+	 * Test ABC => BC
 	 */
 	@Test
-	public void testTruncateAInFirst2Positions_ABC_Success() {
+	public void testTruncateAInFirst2Positions_ABC() {
 		
 		String actual = helper.truncateAInFirst2Positions("ABC");
 		String expected = "BC";
 		
 		assertEquals(expected, actual);
 	}
+	
+	/*
+	 * Test CDEF => CDEF
+	 */
+	@Test
+	public void testTruncateAInFirst2Positions_CDEF() {
+		
+		String actual = helper.truncateAInFirst2Positions("DCEF");
+		String expected = "DCEF";
+		
+		assertEquals(expected, actual);		
+	}
+	
+	/*
+	 * Test CDAA => CDAA
+	 */
+	@Test
+	public void testTruncateAInFirst2Positions_CDAA() {
+		
+		String actual = helper.truncateAInFirst2Positions("CDAA");
+		String expected = "CDAA";
+		
+		assertEquals(expected, actual);
+	}
+	
+//	areFirstAndLastTwoCharactersTheSame
+	
+	/*
+	 * ABCD => false
+	 * ABAB => true
+	 * AB 	=> true
+	 * A	=> false
+	*/
+	
+	/*
+	* Test ABCD => false
+	*/
+	@Test
+	public void areFirstAndLastTwoCharactersTheSame_False_ABCD() {
+		assertFalse(helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+	}
+	
+	/*
+	* Test ABAB => false
+	*/
+	@Test
+	public void areFirstAndLastTwoCharactersTheSame_True_ABAB() {
+		assertTrue(helper.areFirstAndLastTwoCharactersTheSame("ABAB"));
+	}
+	
+	/*
+	* Test AB => true
+	*/
+//	@Test
+//	public void areFirstAndLastTwoCharactersTheSame_True_ABAB
+	
 
 }
